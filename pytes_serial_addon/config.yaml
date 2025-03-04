@@ -1,0 +1,16 @@
+name: Pytes Serial Addon
+version: 1.0.0
+slug: pytes_serial_addon
+description: Addon for Pytes Serial communication
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: application
+boot: auto
+options:
+  serial_port: "/dev/ttyUSB0"
+schema:
+  serial_port: str

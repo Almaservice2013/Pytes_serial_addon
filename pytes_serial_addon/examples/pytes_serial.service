@@ -1,0 +1,17 @@
+[Unit]
+Description=Pytes/Pylontech battery utility for writing to JSON/MQTT/MariaDB
+After=network.target
+
+[Service]
+Type=simple
+Environment="PYTHONUNBUFFERED=1"
+# Change these according to the intallation directory location
+#   Example with Python system install:
+WorkingDirectory=/home/pi/pytes_serial
+ExecStart=/usr/bin/python3 /home/pi/pytes_serial/pytes_serial.py
+#   Example with Python virtual environment install:
+# WorkingDirectory=/home/pi/pytes_serial
+# ExecStart=/home/pi/pytes_serial/.venv/bin/python /home/pi/pytes_serial/pytes_serial.py
+
+[Install]
+WantedBy=multi-user.target
